@@ -47,26 +47,28 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
         </div>
       </div>
 
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
+      <div className="relative z-10 flex items-center justify-center min-h-screen p-2 sm:p-4">
         <div className="w-full max-w-6xl">
-          {/* Enhanced Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-4 mb-8 bg-white/15 backdrop-blur-lg rounded-2xl px-10 py-6 hover:bg-white/20 transition-all duration-500 hover:scale-105 shadow-2xl border border-white/20">
+          {/* Enhanced Header - Mobile Responsive */}
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-6 sm:mb-8 bg-white/15 backdrop-blur-lg rounded-2xl px-4 sm:px-6 lg:px-10 py-4 sm:py-6 hover:bg-white/20 transition-all duration-500 hover:scale-105 shadow-2xl border border-white/20">
               <div className="relative">
-                <BookOpen className="h-12 w-12 text-white drop-shadow-lg" />
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+                <BookOpen className="h-8 w-8 sm:h-10 lg:h-12 text-white drop-shadow-lg" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-400 rounded-full animate-ping"></div>
               </div>
-              <div>
-                <h1 className="text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <div className="text-center sm:text-left">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight">
                   Smart Attendance
                 </h1>
-                <p className="text-xl text-white/90 font-medium mt-2">Management System</p>
+                <p className="text-sm sm:text-lg lg:text-xl text-white/90 font-medium mt-1 sm:mt-2">
+                  Management System
+                </p>
               </div>
             </div>
-            <p className="text-white/90 text-2xl font-light max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/90 text-base sm:text-lg lg:text-2xl font-light max-w-2xl mx-auto leading-relaxed px-4">
               Experience the future of attendance tracking with our intelligent, secure, and user-friendly platform
             </p>
-            <div className="flex justify-center gap-2 mt-6">
+            <div className="flex justify-center gap-2 mt-4 sm:mt-6">
               <div className="w-2 h-2 bg-white/60 rounded-full animate-bounce"></div>
               <div className="w-2 h-2 bg-white/60 rounded-full animate-bounce delay-100"></div>
               <div className="w-2 h-2 bg-white/60 rounded-full animate-bounce delay-200"></div>
@@ -74,7 +76,7 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
           </div>
 
           {/* Enhanced Portal Selection Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-5xl mx-auto px-2 sm:px-0">
             {/* Student Portal Card */}
             <Card className="bg-white/10 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer group relative overflow-hidden">
               {/* Card Background Gradient */}
@@ -93,10 +95,10 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
                     <Star className="h-4 w-4 text-yellow-800" />
                   </div>
                 </div>
-                <CardTitle className="text-4xl font-bold bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent mb-3">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent mb-3">
                   Student Portal
                 </CardTitle>
-                <CardDescription className="text-white/80 text-lg font-medium">
+                <CardDescription className="text-white/80 text-base sm:text-lg font-medium px-2 sm:px-0">
                   Your gateway to seamless attendance tracking and academic progress
                 </CardDescription>
               </CardHeader>
@@ -104,33 +106,41 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
               <CardContent className="space-y-8 relative z-10">
                 {/* Enhanced Features */}
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
-                      <Shield className="h-6 w-6 text-white" />
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div>
-                      <span className="text-white font-semibold text-lg">Secure Personal Tracking</span>
-                      <p className="text-white/70 text-sm">Your data is protected with enterprise-grade security</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-pink-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
-                      <BarChart3 className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <span className="text-white font-semibold text-lg">Smart Analytics</span>
-                      <p className="text-white/70 text-sm">Detailed insights into your attendance patterns</p>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-white font-semibold text-base sm:text-lg block">
+                        Secure Personal Tracking
+                      </span>
+                      <p className="text-white/70 text-xs sm:text-sm">
+                        Your data is protected with enterprise-grade security
+                      </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
-                      <Clock className="h-6 w-6 text-white" />
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-400 to-pink-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div>
-                      <span className="text-white font-semibold text-lg">Real-time Updates</span>
-                      <p className="text-white/70 text-sm">Instant attendance marking and live notifications</p>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-white font-semibold text-base sm:text-lg block">Smart Analytics</span>
+                      <p className="text-white/70 text-xs sm:text-sm">
+                        Detailed insights into your attendance patterns
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-white font-semibold text-base sm:text-lg block">Real-time Updates</span>
+                      <p className="text-white/70 text-xs sm:text-sm">
+                        Instant attendance marking and live notifications
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -138,11 +148,11 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
                 {/* Enhanced Access Button */}
                 <Button
                   onClick={onSelectStudent}
-                  className="w-full h-16 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-xl font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-2 border-white/20 hover:border-white/30 group/btn"
+                  className="w-full h-12 sm:h-14 lg:h-16 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-lg sm:text-xl font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-2 border-white/20 hover:border-white/30 group/btn"
                 >
-                  <Users className="h-7 w-7 mr-3 group-hover/btn:animate-bounce" />
-                  Enter Student Portal
-                  <div className="ml-3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <Users className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 mr-2 sm:mr-3 group-hover/btn:animate-bounce" />
+                  <span className="truncate">Enter Student Portal</span>
+                  <div className="ml-2 sm:ml-3 w-2 h-2 bg-white rounded-full animate-pulse flex-shrink-0"></div>
                 </Button>
 
                 {/* Demo Info with Enhanced Design */}
@@ -184,10 +194,10 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
                     <Award className="h-4 w-4 text-yellow-800" />
                   </div>
                 </div>
-                <CardTitle className="text-4xl font-bold bg-gradient-to-r from-emerald-200 to-teal-200 bg-clip-text text-transparent mb-3">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-emerald-200 to-teal-200 bg-clip-text text-transparent mb-3">
                   Teacher Portal
                 </CardTitle>
-                <CardDescription className="text-white/80 text-lg font-medium">
+                <CardDescription className="text-white/80 text-base sm:text-lg font-medium px-2 sm:px-0">
                   Comprehensive tools for managing student attendance and academic insights
                 </CardDescription>
               </CardHeader>
@@ -195,33 +205,41 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
               <CardContent className="space-y-8 relative z-10">
                 {/* Enhanced Features */}
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
-                      <Users className="h-6 w-6 text-white" />
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div>
-                      <span className="text-white font-semibold text-lg">Complete Student Overview</span>
-                      <p className="text-white/70 text-sm">Monitor all students with advanced filtering options</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
-                    <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
-                      <BarChart3 className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <span className="text-white font-semibold text-lg">Advanced Analytics</span>
-                      <p className="text-white/70 text-sm">Generate comprehensive reports and insights</p>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-white font-semibold text-base sm:text-lg block">
+                        Complete Student Overview
+                      </span>
+                      <p className="text-white/70 text-xs sm:text-sm">
+                        Monitor all students with advanced filtering options
+                      </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
-                      <Shield className="h-6 w-6 text-white" />
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div>
-                      <span className="text-white font-semibold text-lg">Administrative Control</span>
-                      <p className="text-white/70 text-sm">Secure access with comprehensive management tools</p>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-white font-semibold text-base sm:text-lg block">Advanced Analytics</span>
+                      <p className="text-white/70 text-xs sm:text-sm">Generate comprehensive reports and insights</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all duration-300 group/item">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-white font-semibold text-base sm:text-lg block">
+                        Administrative Control
+                      </span>
+                      <p className="text-white/70 text-xs sm:text-sm">
+                        Secure access with comprehensive management tools
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -229,11 +247,11 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
                 {/* Enhanced Access Button */}
                 <Button
                   onClick={onSelectTeacher}
-                  className="w-full h-16 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-xl font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-2 border-white/20 hover:border-white/30 group/btn"
+                  className="w-full h-12 sm:h-14 lg:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-lg sm:text-xl font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-2 border-white/20 hover:border-white/30 group/btn"
                 >
-                  <GraduationCap className="h-7 w-7 mr-3 group-hover/btn:animate-bounce" />
-                  Enter Teacher Portal
-                  <div className="ml-3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 mr-2 sm:mr-3 group-hover/btn:animate-bounce" />
+                  <span className="truncate">Enter Teacher Portal</span>
+                  <div className="ml-2 sm:ml-3 w-2 h-2 bg-white rounded-full animate-pulse flex-shrink-0"></div>
                 </Button>
 
                 {/* Demo Info with Enhanced Design */}
