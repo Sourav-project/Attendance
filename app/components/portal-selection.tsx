@@ -49,20 +49,26 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
 
       <div className="relative z-10 flex items-center justify-center min-h-screen p-2 sm:p-4">
         <div className="w-full max-w-6xl">
-          {/* Enhanced Header - Mobile Responsive */}
+          {/* Enhanced Header with Rotating Gradient Animation */}
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-6 sm:mb-8 bg-white/15 backdrop-blur-lg rounded-2xl px-4 sm:px-6 lg:px-10 py-4 sm:py-6 hover:bg-white/20 transition-all duration-500 hover:scale-105 shadow-2xl border border-white/20">
-              <div className="relative">
-                <BookOpen className="h-8 w-8 sm:h-10 lg:h-12 text-white drop-shadow-lg" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-400 rounded-full animate-ping"></div>
-              </div>
-              <div className="text-center sm:text-left">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight">
-                  Smart Attendance
-                </h1>
-                <p className="text-sm sm:text-lg lg:text-xl text-white/90 font-medium mt-1 sm:mt-2">
-                  Management System
-                </p>
+            <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-6 sm:mb-8 relative">
+              {/* Rotating Gradient Background */}
+              <div className="absolute inset-0 rounded-2xl animate-rotating-gradient opacity-80"></div>
+
+              {/* Content Container */}
+              <div className="relative bg-white/15 backdrop-blur-lg rounded-2xl px-4 sm:px-6 lg:px-10 py-4 sm:py-6 hover:bg-white/20 transition-all duration-500 hover:scale-105 shadow-2xl border border-white/20 flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                <div className="relative">
+                  <BookOpen className="h-8 w-8 sm:h-10 lg:h-12 text-white drop-shadow-lg" />
+                  <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-400 rounded-full animate-ping"></div>
+                </div>
+                <div className="text-center sm:text-left">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight">
+                    Smart Attendance
+                  </h1>
+                  <p className="text-sm sm:text-lg lg:text-xl text-white/90 font-medium mt-1 sm:mt-2">
+                    Management System
+                  </p>
+                </div>
               </div>
             </div>
             <p className="text-white/90 text-base sm:text-lg lg:text-2xl font-light max-w-2xl mx-auto leading-relaxed px-4">
@@ -278,7 +284,7 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
           <div className="text-center mt-16">
             <div className="inline-flex items-center gap-3 mb-4 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 hover:bg-white/15 transition-all duration-300">
               <Sparkles className="h-5 w-5 text-white animate-pulse" />
-              <p className="text-white/90 text-lg font-medium">© 2024 Smart Attendance System</p>
+              <p className="text-white/90 text-lg font-medium">Created with ❤️ by Sourav</p>
               <Sparkles className="h-5 w-5 text-white animate-pulse delay-500" />
             </div>
             <p className="text-white/70 text-base">Empowering Education Through Innovation</p>
@@ -298,12 +304,38 @@ export default function PortalSelection({ onSelectStudent, onSelectTeacher }: Po
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
         }
+        @keyframes rotating-gradient {
+          0% {
+            background: linear-gradient(45deg, #8b5cf6, #a855f7, #c084fc, #e879f9, #f472b6, #fb7185, #fbbf24, #34d399, #60a5fa, #8b5cf6);
+            background-size: 400% 400%;
+            background-position: 0% 50%;
+          }
+          25% {
+            background-position: 100% 50%;
+          }
+          50% {
+            background: linear-gradient(135deg, #f472b6, #fb7185, #fbbf24, #34d399, #60a5fa, #8b5cf6, #a855f7, #c084fc, #e879f9, #f472b6);
+            background-size: 400% 400%;
+            background-position: 100% 100%;
+          }
+          75% {
+            background-position: 0% 100%;
+          }
+          100% {
+            background: linear-gradient(225deg, #34d399, #60a5fa, #8b5cf6, #a855f7, #c084fc, #e879f9, #f472b6, #fb7185, #fbbf24, #34d399);
+            background-size: 400% 400%;
+            background-position: 0% 50%;
+          }
+        }
         .animate-float {
           animation: float 3s ease-in-out infinite;
         }
         .animate-gradient-x {
           background-size: 200% 200%;
           animation: gradient-x 3s ease infinite;
+        }
+        .animate-rotating-gradient {
+          animation: rotating-gradient 8s ease-in-out infinite;
         }
       `}</style>
     </div>
